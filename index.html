@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td{
+            height: 20px;
+            width: 20px;
+            border:1px solid black;
+           
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <input type="number" id="num">
+        <button onclick="pressMe()">Generate</button>
+    </div>
+    <div id="md" style="display:flex">
+    </div>
+
+</body>
+<script>
+    function pressMe(){
+        let x= document.getElementById("num").value;
+        let m=document.getElementById("md");
+        let t=document.createElement("table");
+       
+        for(let i=1;i<=5;i++){
+            let row=document.createElement("tr");
+        let col=document.createElement("td");
+            col.innerText= x* `${i}`;
+            m.appendChild(t).appendChild(row).appendChild(col);
+        }
+        m.insertBefore(t, m.firstChild);
+    }
+</script>
+
+</html>
